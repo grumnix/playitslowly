@@ -1,2 +1,5 @@
-#!/bin/sh
-exec python3 -m playitslowly.app "$@"
+#!/usr/bin/env python
+
+import playitslowly.app
+
+playitslowly.app.main()
