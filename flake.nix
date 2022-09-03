@@ -10,8 +10,10 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
-      in rec {
-        packages = flake-utils.lib.flattenTree rec {
+      in {
+        packages = rec {
+          default = playitslowly;
+
           playitslowly = pkgs.python3Packages.buildPythonPackage rec {
             pname = "playitslowly";
             version = "1.5.1";
@@ -43,7 +45,6 @@
             ];
           };
         };
-        defaultPackage = packages.playitslowly;
       }
     );
 }
