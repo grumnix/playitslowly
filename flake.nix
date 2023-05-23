@@ -2,7 +2,7 @@
   description = "Play it slowly is a software to play back audio files at a different speed or pitch";
 
   inputs = rec {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.05";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
